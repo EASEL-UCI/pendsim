@@ -216,7 +216,7 @@ the package. Example notebooks are hosted on Google Colab:
 
 -   [PID Tuning](https://colab.research.google.com/github/rland93/pendsim/blob/master/notebooks/PID.ipynb)
 
--   [PID Control Design Assignment](https://colab.research.google.com/github/EASEL-UCI/pendsim/blob/main/notebooks/PID_controller_design_assignment.ipynb)
+-   [PID Controller Design Assignment](https://colab.research.google.com/github/EASEL-UCI/pendsim/blob/main/notebooks/PID_controller_design_assignment.ipynb)
 
 -   [Applying a state estimator for better control](https://colab.research.google.com/github/rland93/pendsim/blob/master/notebooks/state_estimation.ipynb)
 
