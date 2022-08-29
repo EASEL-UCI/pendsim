@@ -80,6 +80,8 @@ students to new topics and create interactive assignments that can augment
 theoretical class discussions and hardware experiments. Thus, `pendsim` 
 may be naturally used in engineering courses related to dynamics and control 
 that are taught in any format, including in-person, hybrid, and online settings. 
+An example [PID Controller Design Assignment notebook](https://colab.research.google.com/github/EASEL-UCI/pendsim/blob/main/notebooks/PID_controller_design_assignment.ipynb) is 
+available to show how students may use `pendsim` in a course assignment.
 
 The following simple example (Example 1) shows the ease of creating, modeling,
 and visualizing a proportional-integral-derivative controller:
