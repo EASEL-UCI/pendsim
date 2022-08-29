@@ -187,7 +187,7 @@ Several controller implementations are pre-built. These include:
 -   Energy Swing-Up Controller
 
 The user can implement any control policy by [creating a new custom 
-controller class]((https://rland93.github.io/pendsim/customctl.html). Users
+controller class](https://rland93.github.io/pendsim/customctl.html). Users
 can test new open-ended controller designs.  Controllers can dump data
 into the simulation results so that intermediate control inputs are
 accessible to the final results of the simulation.
