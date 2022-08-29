@@ -75,7 +75,13 @@ user can then design and apply a control policy in the simulation.
 Finally, the user can view the results of the simulation. The ability to
 rapidly create and run experiments allows for fast design-test loops.
 
-This simple example (Example 1) shows the ease of creating, modeling,
+This design-test-visualize sequence also allows instructors to introduce 
+students to new topics and create interactive assignments that can augment 
+theoretical class discussions and hardware experiments. Thus, `pendsim` 
+may be naturally used in engineering courses related to dynamics and control 
+that are taught in any format, including in-person, hybrid, and online settings. 
+
+The following simple example (Example 1) shows the ease of creating, modeling,
 and visualizing a proportional-integral-derivative controller:
 
 ```python
@@ -209,6 +215,8 @@ the package. Example notebooks are hosted on Google Colab:
 -   [System Linearization](https://colab.research.google.com/github/rland93/pendsim/blob/master/notebooks/linearization.ipynb)
 
 -   [PID Tuning](https://colab.research.google.com/github/rland93/pendsim/blob/master/notebooks/PID.ipynb)
+
+-   [PID Control Design Assignment] (https://colab.research.google.com/github/EASEL-UCI/pendsim/blob/main/notebooks/PID_controller_design_assignment.ipynb)  
 
 -   [Applying a state estimator for better control](https://colab.research.google.com/github/rland93/pendsim/blob/master/notebooks/state_estimation.ipynb)
 
