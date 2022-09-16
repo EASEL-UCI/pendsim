@@ -222,3 +222,5 @@ the package. Example notebooks are hosted on Google Colab:
 -   [Applying a state estimator for better control](https://colab.research.google.com/github/rland93/pendsim/blob/master/notebooks/state_estimation.ipynb)
 
 -   [Swing-up by Energy Control](https://colab.research.google.com/github/rland93/pendsim/blob/master/notebooks/swingup.ipynb)
+
+# References
