@@ -9,6 +9,8 @@ feedback control. Example notebooks cover topics
 ranging from linearization to state estimation and 
 optimal control for this classical nonlinear system.
 
+![pendsim graphic](pendsim_graphic.png "Pendulum on a cart simulation.")
+
 ## Contributing and reporting issues
 
 To report any issues using this software, please open a new issue.
