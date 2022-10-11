@@ -1,6 +1,6 @@
 # pendsim: an Inverted Pendulum-On-A-Cart Sandbox!
 Created by Mike Sutherland with the EASEL group at UC Irvine.
-For documentation, see: http://rland93.github.io/pendsim/
+For documentation, see: http://easel-uci.github.io/pendsim/
 
 *pendsim* is a Python package that can be used to help 
 students design, analyze, and visualize virtual 
