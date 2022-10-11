@@ -18,6 +18,6 @@ Alternatively, you can manually install pendsim directly through the git reposit
 
 .. code:: bash 
 
-    git clone https://github.com/rland93/pendsim.git
-    cd pendulum
+    git clone https://github.com/easel-uci/pendsim.git
+    cd pendsim
     pip install -r requirements.txt
