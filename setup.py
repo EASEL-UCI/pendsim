@@ -14,7 +14,7 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = "pendsim"
 DESCRIPTION = "A pendulum simulator"
-URL = "https://github.com/rland93/pendsim"
+URL = "https://github.com/easel-uci/pendsim"
 EMAIL = "msutherl@uci.edu"
 AUTHOR = "Mike Sutherland"
 REQUIRES_PYTHON = ">=3.6.0"
