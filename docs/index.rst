@@ -18,7 +18,7 @@ techniques, in the context of every control theorist's favorite system: the
 inverted pendulum-on-a-cart problem!
 
 .. note::
-   For a summary of the package features, as well as how it can be used in an educational context, see the pending `Journal of Open Source Education (JOSE) submission. <https://github.com/rland93/pendsim/paper.pdf>`_
+   For a summary of the package features, as well as how it can be used in an educational context, see the Journal of Open Source Education (JOSE) paper: https://doi.org/10.21105/jose.00168
 
 .. image:: _static/diagram.png
 
@@ -32,9 +32,7 @@ Citing
 
 To cite pendsim please use the following publication:
 
-Mike L. Sutherland and David A. Copp,
-`"pendsim: an inverted-pendulum-on-a-cart simulator written in Python"`,
-Irvine, CA, USA, Jul 2020.
+Mike L. Sutherland and David A. Copp, (2022). pendsim: Developing, Simulating, and Visualizing Feedback Controlled Inverted Pendulum Dynamics. Journal of Open Source Education, 5(56), 168. https://doi.org/10.21105/jose.00168
 
 Audience
 --------
