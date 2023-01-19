@@ -32,7 +32,7 @@ jobs:
     - uses: ammaraskar/sphinx-action@master
       with:
         pre-build-command: "apt-get -qq update --allow-releaseinfo-change -y && apt-get -qq install -y pandoc ffmpeg &&
-        pip install matplotlib scipy filterpy pandas tqdm notebook nbsphinx-link nbsphinx furo numpydoc nb2plots sphinx-autoapi numpy markupsafe && pip install -U sphinx"
+        pip install matplotlib scipy multiprocess filterpy pandas tqdm notebook nbsphinx-link nbsphinx furo numpydoc nb2plots sphinx-autoapi numpy markupsafe && pip install -U sphinx"
         docs-folder: docs
 
     # # Great extra actions to compose with:
