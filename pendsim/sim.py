@@ -2,7 +2,7 @@ import numpy as np
 from scipy import integrate
 from collections import defaultdict
 from tqdm import tqdm
-from multiprocessing import Pool
+from multiprocess import Pool
 import pandas as pd
 from typing import Tuple
 from pendsim.utils import array_to_kv
