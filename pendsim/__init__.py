@@ -1,3 +1,3 @@
 from . import controller, sim, utils, viz
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
