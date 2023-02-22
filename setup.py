@@ -16,9 +16,9 @@ NAME = "pendsim"
 DESCRIPTION = "A pendulum simulator"
 URL = "https://github.com/easel-uci/pendsim"
 EMAIL = "msutherl@uci.edu"
-AUTHOR = "Mike Sutherland"
+AUTHOR = "Mike Sutherland with EASEL group at UCI"
 REQUIRES_PYTHON = ">=3.6.0"
-VERSION = "1.0.4"
+VERSION = "1.2"
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -31,6 +31,7 @@ REQUIRED = [
     "scikit-learn",
     "pytest",
     "filterpy",
+    "multiprocess",
 ]
 
 # What packages are optional?
