@@ -30,9 +30,9 @@ or validating experimental techniques.
 Citing
 ------
 
-To cite pendsim please use the following publication:
+To cite pendsim please use the following:
 
-Mike L. Sutherland and David A. Copp, (2022). pendsim: Developing, Simulating, and Visualizing Feedback Controlled Inverted Pendulum Dynamics. Journal of Open Source Education, 5(56), 168. https://doi.org/10.21105/jose.00168
+Sutherland, M. L. and Copp, D. A. (2023). pendsim: Developing, Simulating, and Visualizing Feedback Controlled Inverted Pendulum Dynamics. Journal of Open Source Education, 6(61), 168, https://doi.org/10.21105/jose.00168
 
 Audience
 --------
