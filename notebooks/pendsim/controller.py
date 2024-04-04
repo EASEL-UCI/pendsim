@@ -571,6 +571,7 @@ class LQR(Controller):
 
     def policy(self, state: np.ndarray, dt: float) -> Tuple[float, dict]:
         action = self.do_lqr(self.window, self.A, self.B, self.Q, self.R, state)
+        action = action[0]
         return action, {}
 
 
