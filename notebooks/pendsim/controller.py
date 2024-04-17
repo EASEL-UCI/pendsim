@@ -156,7 +156,7 @@ class Controller(object):
         for k in range(w):
             c1 = np.linalg.inv(R + B.T @ P[k+1] @ B)
             c2 = B.T @ P[k+1] @ A
-            u[k] = c1 @ c2 @ x
+            u[k] = -(c1 @ c2 @ x)
         return np.squeeze(u)
 
     def get_linear_sys(
