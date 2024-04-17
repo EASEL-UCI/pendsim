@@ -154,8 +154,8 @@ class Controller(object):
 
         u = [None] * w
         for k in range(w):
-            c1 = np.linalg.inv(R + B.T @ P[k] @ B)
-            c2 = B.T @ P[k] @ A
+            c1 = np.linalg.inv(R + B.T @ P[k+1] @ B)
+            c2 = B.T @ P[k+1] @ A
             u[k] = c1 @ c2 @ x
         return np.squeeze(u)
 
