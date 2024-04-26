@@ -107,7 +107,6 @@ class Controller(object):
 
     def do_lqr(
         self,
-        w: int,
         A: np.ndarray,
         B: np.ndarray,
         Q: np.ndarray,
@@ -123,8 +122,6 @@ class Controller(object):
 
         Parameters
         ----------
-        w : int
-            window over which to perform LQR control
         A : np.ndarray
             linear plant transition matrix
         B : np.ndarray
@@ -142,21 +139,9 @@ class Controller(object):
             sequence of control actions
         """
 
-        P = [None] * (w + 1)
-        P[w] = Q
-        for k in range(w, 0, -1):
-            p1 = A.T @ P[k] @ A  # (4,4)
-            p2 = A.T @ P[k] @ B  # (4,1)
-            p3 = R + B.T @ P[k] @ B  # (4,1)
-            p3 = np.linalg.pinv(R + B.T @ P[k] @ B)
-            p4 = B.T @ P[k] @ A
-            P[k - 1] = p1 - p2 @ p3 @ p4 + Q
-
-        u = [None] * w
-        for k in range(w):
-            c1 = np.linalg.inv(R + B.T @ P[k+1] @ B)
-            c2 = B.T @ P[k+1] @ A
-            u[k] = -(c1 @ c2 @ x)
+        P = linalg.solve_discrete_are(A,B,Q,R)
+        gain = (linalg.inv(B.T @ P @ B + R)) @ (B.T @ P @ A)
+        u = -(gain @ x)
         return np.squeeze(u)
 
     def get_linear_sys(
@@ -560,18 +545,15 @@ class LQR(Controller):
         self,
         pend: pendsim.sim.Pendulum,
         dt: float,
-        window: int,
         Q: np.ndarray,
         R: np.ndarray,
     ) -> None:
-        self.window = window
         self.A, self.B = self.get_linear_sys(pend.jacA, pend.jacB, dt)
         self.Q = Q
         self.R = R
 
     def policy(self, state: np.ndarray, dt: float) -> Tuple[float, dict]:
-        action = self.do_lqr(self.window, self.A, self.B, self.Q, self.R, state)
-        action = action[0]
+        action = self.do_lqr(self.A, self.B, self.Q, self.R, state)
         return action, {}
 
 
