@@ -1,6 +1,6 @@
 import pendsim.sim, pendsim.utils
 import copy
-from scipy import integrate
+from scipy import integrate, linalg
 
 import numpy as np
 from scipy.signal import cont2discrete
