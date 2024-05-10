@@ -61,12 +61,12 @@ class Pendulum(object):
         self.jacA = np.array(
             [
                 [0, 1.0, 0, 0],
-                [0, 0, -self.m * self.g / self.M, 0.0],
+                [0, 0, self.m * self.g / self.M, 0.0],
                 [0, 0, 0, 1.0],
                 [0, 0, self.g * (self.m * self.M) / (self.l * self.M), 0.0],
             ]
         )
-        self.jacB = np.array([[0.0], [1.0 / self.M], [0.0], [-1.0 / (self.l * self.M)]])
+        self.jacB = np.array([[0.0], [1.0 / self.M], [0.0], [1.0 / (self.l * self.M)]])
 
     def system_dynamics(self, t: float, state: np.ndarray) -> np.ndarray:
         """Solve the system dynamics in the form xdot = A\\x
