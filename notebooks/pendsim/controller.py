@@ -1,6 +1,6 @@
 import pendsim.sim, pendsim.utils
 import copy
-from scipy import integrate
+from scipy import integrate, linalg
 
 import numpy as np
 from scipy.signal import cont2discrete
@@ -107,12 +107,12 @@ class Controller(object):
 
     def do_lqr(
         self,
-        w: int,
         A: np.ndarray,
         B: np.ndarray,
         Q: np.ndarray,
         R: np.ndarray,
         x: np.ndarray,
+        w # window
     ) -> np.ndarray:
         """Finite-horizon discrete Linear Quadratic Regulator policy.
         An LQR controller produces an optimal control policy over a finite horizon
@@ -123,8 +123,6 @@ class Controller(object):
 
         Parameters
         ----------
-        w : int
-            window over which to perform LQR control
         A : np.ndarray
             linear plant transition matrix
         B : np.ndarray
@@ -135,13 +133,13 @@ class Controller(object):
             control action penalty
         x : np.ndarray
             system state
+        w : window
 
         Returns
         -------
         np.ndarray
             sequence of control actions
         """
-
         P = [None] * (w + 1)
         P[w] = Q
         for k in range(w, 0, -1):
@@ -157,7 +155,11 @@ class Controller(object):
             c1 = np.linalg.inv(R + B.T @ P[k+1] @ B)
             c2 = B.T @ P[k+1] @ A
             u[k] = -(c1 @ c2 @ x)
-        return np.squeeze(u)
+        return np.squeeze(u[0])
+        #P = linalg.solve_discrete_are(A,B,Q,R)
+        #gain = (linalg.inv(B.T @ P @ B + R)) @ (B.T @ P @ A)
+        #u = -(gain @ x)
+        #return np.squeeze(u)
 
     def get_linear_sys(
         self, Adot: np.ndarray, Bdot: np.ndarray, dt: float
@@ -560,18 +562,17 @@ class LQR(Controller):
         self,
         pend: pendsim.sim.Pendulum,
         dt: float,
-        window: int,
         Q: np.ndarray,
         R: np.ndarray,
+        W
     ) -> None:
-        self.window = window
         self.A, self.B = self.get_linear_sys(pend.jacA, pend.jacB, dt)
         self.Q = Q
         self.R = R
+        self.W = W
 
     def policy(self, state: np.ndarray, dt: float) -> Tuple[float, dict]:
-        action = self.do_lqr(self.window, self.A, self.B, self.Q, self.R, state)
-        action = action[0]
+        action = self.do_lqr(self.A, self.B, self.Q, self.R, state, self.W)
         return action, {}
 
 
