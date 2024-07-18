@@ -1,0 +1,34 @@
+pendsim
+=======
+
+.. py:module:: pendsim
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/pendsim/controller/index
+   /autoapi/pendsim/sim/index
+   /autoapi/pendsim/test_controller/index
+   /autoapi/pendsim/utils/index
+   /autoapi/pendsim/viz/index
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   pendsim.__version__
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+   :value: '1.2.0'
+
+
