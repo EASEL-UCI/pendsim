@@ -30,7 +30,7 @@ except ImportError:
 
 project = "pendsim"
 copyright = "2021, Mike Sutherland"
-author = "Mike Sutherland"
+author = "Mike Sutherland with the EASEL Group at UCI"
 
 # The full version, including alpha/beta/rc tags
 release = pendsim.__version__
