@@ -12,6 +12,7 @@ pendsim: A Pendulum-on-a-cart Simulator!
    Example: PID Control <PID>
    Example: Swing-Up <SwingUp>
    Example: State Estimation <StateEstimation>
+   Example: LQR <LQR>
 
 pendsim is a package for exploring dynamics, control, and state estimation
 techniques, in the context of every control theorist's favorite system: the 
