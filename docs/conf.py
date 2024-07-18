@@ -29,7 +29,7 @@ except ImportError:
 # -- Project information -----------------------------------------------------
 
 project = "pendsim"
-copyright = "2021, Mike Sutherland"
+copyright = "2021, Mike Sutherland with the EASEL Group at UCI"
 author = "Mike Sutherland with the EASEL Group at UCI"
 
 # The full version, including alpha/beta/rc tags
